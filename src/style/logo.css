@@ -1,0 +1,8 @@
+.text-logo-gradient 
+{
+    background: linear-gradient(45deg, #3C8BD4, #C0C0C0);
+    background-clip: text;
+    color: transparent;
+    display: inline-block;
+
+}
