@@ -18,16 +18,16 @@ const Footer = () => {
                                 <h2 className="mb-6 text-sm font-semibold text-blueLogo uppercase dark:text-white">Resources</h2>
                                 <ul className="text-gray-500 dark:text-gray-400 font-medium">
                                     <li className="mb-4">
-                                        <a href="/" className="hover:underline">Home</a>
+                                        <a href="/" className="hover:underline">Accueil</a>
                                     </li>
                                     <li className="mb-4">
-                                        <a href="/" className="hover:underline">About</a>
+                                        <a href="/" className="hover:underline">À propos</a>
                                     </li>
                                     <li className="mb-4">
-                                        <a href="/" className="hover:underline">Rent A Car</a>
+                                        <a href="/" className="hover:underline">Louer Voiture</a>
                                     </li>
                                     <li>
-                                        <a href="/" className="hover:underline">Contact Us</a>
+                                        <a href="/" className="hover:underline">Contactez-nous</a>
                                     </li>
                                 </ul>
                             </div>
@@ -46,7 +46,7 @@ const Footer = () => {
                     </div>
                     <hr className="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
                     <div className="sm:flex sm:items-center sm:justify-between">
-                        <span className="text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2024 <a href="/" className="hover:underline"><span className='text-logo-gradient font-extrabold'>CarRental</span>Management</a>. All Rights Reserved.
+                        <span className="text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2024 <a href="/" className="hover:underline"><span className='text-logo-gradient font-extrabold'>CarRental</span>Management</a>. Tous droits réservés.
                         </span>
                         <div className="flex mt-4 gap-6 sm:justify-center sm:mt-0">
                             <a href="/">
