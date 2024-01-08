@@ -1,16 +1,16 @@
 import React from 'react'
 import Drawer from './Drawer'
 
-const Card = ({ vehicleName, vehicleModel, vehiclePrice, vehicleAvailable }) => {   
+const Card = ({ vehicleName, vehicleId, vehicleModel, vehiclePrice, vehicleAvailable, showCard = true }) => {   
 
-    return (
+    return showCard ? (
         <div className="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
             <a href="#">
                 <img className="p-8 rounded-t-lg" src="card-car.svg" alt="product image" />
             </a>
             <div className="px-5 pb-5">
                 <a href="#">
-                    <h5 className="text-xl font-semibold tracking-tight text-gray-900 dark:text-white">{vehicleName}</h5>
+                    <h5 className="text-xl font-semibold tracking-tight text-gray-900 dark:text-white">{vehicleName} ( {vehicleId} )</h5>
                 </a>
                 <div className="flex items-center mt-2.5 mb-5">
                     <div className="flex items-center space-x-1 rtl:space-x-reverse">
@@ -34,13 +34,13 @@ const Card = ({ vehicleName, vehicleModel, vehiclePrice, vehicleAvailable }) => 
                 </div>
                 <div className="flex items-center justify-between gap-10">
                     <span className="text-3xl font-bold text-gray-900 dark:text-white"> {vehiclePrice} DH</span>
-                    <a className={`text-white ${vehicleAvailable ? 'bg-blueLogo hover:bg-silverGrey' : 'bg-silverGrey pointer-events-none'} font-medium rounded-lg text-sm px-5 py-2.5 text-center ${vehicleAvailable ? 'dark:bg-blueLogo dark:hover:bg-silverGrey' : 'dark:bg-silverGrey'} duration-300`}>Rent Car</a>
+                    <a className={`text-white ${vehicleAvailable ? 'bg-blueLogo hover:bg-silverGrey' : 'bg-silverGrey pointer-events-none'} font-medium rounded-lg text-sm px-5 py-2.5 text-center ${vehicleAvailable ? 'dark:bg-blueLogo dark:hover:bg-silverGrey' : 'dark:bg-silverGrey'} duration-300`}>Louer Voiture</a>
                     
                 </div>
             </div>
         </div>
 
-    )
+    ) : null;
 }
 
 export default Card

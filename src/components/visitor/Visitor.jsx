@@ -4,7 +4,7 @@ import Card from '../Card'
 import Loading from '../Loading'
 import axios from 'axios';
 
-const Visitor = () => {
+const Visitor = ({isAdmin}) => {
     const [vehicle, setVehicle] = useState([]);
     const [loading, setLoading] = useState(true);
 
@@ -18,7 +18,6 @@ const Visitor = () => {
                     'Content-Type': 'application/json',
                 },
             });
-            console.log('Response:', response.data);
             setVehicle(response.data);
             setLoading(false);
         } catch (error) {
@@ -34,7 +33,6 @@ const Visitor = () => {
     return (
         <>
             <div className='flex flex-col justify-center items-center gap-12'>
-
                 <div className='flex flex-col lg:flex-row justify-center items-center gap-20 m-11 mt-0'>
                     <img src='vCar.svg' alt='Car Picture' className='w-[70vh] ' />
                     <div className='flex flex-col justify-center items-center gap-7'>
@@ -87,7 +85,7 @@ const Visitor = () => {
                                 <div className='grid grid-cols-2 md:grid-cols-4 gap-6 m-11'>
                                     {vehicle.map((vehicles) => (
                                         <div key={vehicles.id}>
-                                            <Card vehicleName={vehicles.name} vehicleModel={vehicles.model} vehiclePrice={vehicles.price} vehicleAvailable={vehicles.available} />
+                                            {!isAdmin && (<Card vehicleId={vehicles.id} vehicleName={vehicles.name} vehicleModel={vehicles.model} vehiclePrice={vehicles.price} vehicleAvailable={vehicles.available} showCard={true} /> )}
                                         </div>
                                     ))}
                                 </div>
@@ -95,10 +93,6 @@ const Visitor = () => {
                         }
                     </div>
                 </div>
-
-
-
-
             </div>
         </>
     )
