@@ -5,6 +5,7 @@ import Footer from './components/Footer'
 import Container from './routes/Container'
 import Admin from './components/admin/Admin'
 import Login from './components/Login'
+import Visitor from './components/visitor/Visitor'
 import './App.css'
 
 
@@ -17,6 +18,7 @@ function App() {
           <Route path='login' element={<Login />}/>
           <Route path='/' element={<Container />}>
             <Route index element={<Admin />}></Route>
+            <Route path='visitor' element={<Visitor />}></Route>
           </Route>
         </Routes>
       </Router>

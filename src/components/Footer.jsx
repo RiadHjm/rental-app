@@ -23,9 +23,6 @@ const Footer = () => {
                                     <li className="mb-4">
                                         <a href="/" className="hover:underline">À propos</a>
                                     </li>
-                                    <li className="mb-4">
-                                        <a href="/" className="hover:underline">Louer Voiture</a>
-                                    </li>
                                     <li>
                                         <a href="/" className="hover:underline">Contactez-nous</a>
                                     </li>
